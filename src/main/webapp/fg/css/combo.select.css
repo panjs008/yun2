@@ -1,0 +1,241 @@
+/**
+ * Variables
+ */
+/**
+ * Wrapper
+ */
+/* webkit, opera, IE9 */
+input.combo-input::selection { background:transparent; }
+/* mozilla firefox */
+input.combo-input::-moz-selection { background:transparent; }
+.combo-select {
+  position: relative;
+  width: 98px;
+  margin-right: 5px;
+  float: left;
+  font: 14px Helvetica, Arial, Sans-serif;
+  }
+  .combo-select .combo-input {
+    margin-bottom: 0; }
+.kf-select .combo-select{ width: 278px;margin-right: 0;border-color: #bfc9d8}
+.kf-select .combo-select .combo-input{ height: 40px;color:#333}
+.kf-select .combo-arrow:before{border-top-color: #617eaa}
+.select-100 .combo-select{ width: 100px;}
+.select-110 .combo-select{ width: 110px;}
+.select-120 .combo-select{ width: 120px;}
+.select-140 .combo-select{ width: 140px;}
+.select-170 .combo-select{ width: 170px;}
+.select-172 .combo-select{ width: 172px;}
+.select-180 .combo-select{ width: 180px;}
+.select-195 .combo-select{ width: 195px;}
+.select-210 .combo-select{ width: 210px;}
+.select-220 .combo-select{ width: 220px;}
+.select-lg .combo-select{ width: 100%;display: block}
+.select-lrg .combo-select{ width: 170px;}
+.select-srg .combo-select{ width: 170px;float: initial}
+.select-H28 .combo-input{padding:5px 7px;}
+.select-mc .combo-arrow:before,.select-ma .combo-arrow:before,
+.select-md .combo-arrow:before,.select-mb .combo-arrow:before{right: 11px;}
+.select-type2 .combo-input{
+  background: #fff;
+  border-radius: 5px;
+}
+.select-black .combo-input{
+  color:#333 !important;;
+}
+.select-type1 .combo-input{
+  background: #f0f1fb;
+  border-radius: 5px;
+  border-color: #d7d9e4;
+  color:#7490ae;
+}
+.select-type1 .combo-arrow:before{
+  background: url("../images/down_tri.png") 0 0 no-repeat;
+  width: 11px;
+  height: 6px;
+}
+.select-type1 .combo-open .combo-arrow:before{
+  background-position: 0 0;
+  transform: rotate(180deg);
+}
+.select-type-pop .combo-input{
+  background: #ffffff;
+  border-radius: 5px;
+  border-color: #c7d3e0;
+  color:#333;
+
+}
+.select-type3 .combo-input{
+  background: #284697;
+  color:#fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 9px 13px;
+  border: none;
+  border-radius: 5px;
+}
+/**
+ * Input field
+ */
+.combo-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  padding:6px 7px;
+  border-radius:5px;
+  color:#353535;
+  background: #eceff9;
+  border: 1px solid #d7dbe1;
+  user-select:none;
+}
+  .combo-input:focus {
+    outline: none; }
+
+/**
+ * Arrow
+ */
+.combo-arrow {
+  position: absolute;
+  right: -4px;
+  top: 0;
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  width: 40px;
+
+  color: #617eaa; }
+  .combo-arrow:before {
+    content: " ";
+    background: url("../images/sel_tri.png") 0 0 no-repeat;
+    display: block;
+    width: 10px;
+    height: 5px;
+    top: 0;
+    right: 12px;
+    bottom: 0;
+    position: absolute;
+    margin: auto 0; }
+
+/**
+ * When opened
+ */
+.combo-open .combo-arrow {
+  border-color: #51A7E8; }
+  .combo-open .combo-arrow:before {
+    border-top: none;
+    background-position: 0 -10px;
+  }
+
+/**
+ * When focused
+ */
+.combo-focus {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border-color: #51A7E8; }
+  .combo-focus input {
+    border-color: #51A7E8; }
+
+/**
+ * Hide native select
+ */
+.combo-select select {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  opacity: 0; }
+
+@media only screen and (min-width: 960px) {
+  .combo-select select {
+    left: -1px;
+    top: -1px;
+    width: 0;
+    height: 0;
+    margin: 0; } }
+/**
+ * Selected option
+ */
+.option-selected {
+  background-color: #eee; }
+
+/**
+ * Hovered option
+ */
+.option-hover {
+  background-color: #006eab;
+  color: #fff; }
+
+/**
+ * Option item
+ */
+.option-item {
+  cursor: pointer;
+  border-bottom: 1px #e3e3e3 solid; }
+  .option-item:hover {
+    background-color: #006eab;
+    color: #fff; }
+  .option-item:last-child {
+    border-bottom: none; }
+
+/**
+ * Disabled and optgroups
+ */
+.option-group {
+  cursor: text;
+  font-weight: 600;
+  background: #e1e1e1;
+  border: 1px #ccc solid;
+  border-width: 1px 0; }
+
+/**
+ * Disabled
+ */
+.option-disabled {
+  opacity: 0.5; }
+
+/**
+ * Dropdown
+ */
+.combo-dropdown {
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  margin: 0;
+  padding: 0;
+  display: none;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #999999;
+  border-radius: 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-sizing: border-box; }
+  .combo-dropdown li {
+    list-style: none;
+    padding: 3px 5px;
+    margin: 0; }
+
+/**
+ * On Active
+ */
+.combo-open .combo-dropdown {
+  display: block; }
+
+/**
+ * Search marker
+ */
+.combo-marker {
+  text-decoration: underline; }
